@@ -9,9 +9,10 @@
     width: 1200px;
   }
   .left-button, .right-button {
+    z-index: 20;
     .flex(center);
     color: @lambda-times-color-white;
-    background-color: @lambda-times-color-primary;
+    // background-color: @lambda-times-color-primary;
     font-size: 40px;
     border-radius: 50%;
     position: absolute;
@@ -36,6 +37,24 @@
   }
   img {
     .width-100();
-    display: block;
+    position: absolute;
+    right: 0;
+    height: 500px;
+    z-index: 5;
+  }
+  .img {
+    transition: transform 1s;
+  }
+
+  .left {
+    transform: translateX(-100%);
+  }
+
+  .right {
+    transform: translateX(100%);
+  }
+
+  .active {
+    transform: translateX(0%);
   }
 }

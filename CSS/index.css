@@ -269,12 +269,12 @@ body {
 }
 .carousel .left-button,
 .carousel .right-button {
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: none;
   flex-direction: row;
   color: #fff;
-  background-color: #333;
   font-size: 40px;
   border-radius: 50%;
   position: absolute;
@@ -300,5 +300,20 @@ body {
 }
 .carousel img {
   width: 100%;
-  display: block;
+  position: absolute;
+  right: 0;
+  height: 500px;
+  z-index: 5;
+}
+.carousel .img {
+  transition: transform 1s;
+}
+.carousel .left {
+  transform: translateX(-100%);
+}
+.carousel .right {
+  transform: translateX(100%);
+}
+.carousel .active {
+  transform: translateX(0%);
 }
