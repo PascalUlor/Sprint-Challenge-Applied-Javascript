@@ -7,11 +7,11 @@ class Carousel {
 
         this.leftButton.addEventListener('click', () => {
             this.move(false)
-            TweenMax.to(".left", 2, {ease:Elastic.easeOut});
+            TweenMax.to(".img", 2, {ease:Elastic.easeOut});
         });
         this.rightButton.addEventListener('click', () =>{
             this.move(true)
-            TweenMax.to(".right", 2, {ease:Elastic.easeOut});
+            TweenMax.to(".img", 2, {ease:Elastic.easeOut});
         });
       }
 
